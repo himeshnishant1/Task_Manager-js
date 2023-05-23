@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <main>
+        <div class="wrap">
+            <section class="heading">
+                <h1 class="main-heading">Task Manager</h1>
+                <h4 class="sub-heading">Manage your tasks easily!!</h4>
+            </section>
+            <section class="task-manager">
+                <div class="search">
+                    <input type="text" onkeyup="searchTasks(event)" name="search-box" class="search-box" id="search-box" placeholder="Search Tasks...">
+                    <input onclick="restore()" type="button" value="X" id="search-box-cancel" class="search-box-cancel">
+                </div>
+                <div class="task-box">
+                    <div class="tasks">
+                        <ul class="task-list">
+                            <li>
+                                <span>Do Homework</span>
+                                <i class="bi bi-trash"></i>
+                            </li>
+                            <li>
+                                <span>Do Coding</span>
+                                <i class="bi bi-trash"></i>
+                            </li>
+                            <li>
+                                <span>Eating food</span>
+                                <i class="bi bi-trash"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="add-task">
+                        <input type="text" name="add-box" class="add-box" id="add-box" placeholder="Add Tasks...">
+                        <input type="submit" onclick="addTask(event)" value="Add" id="add-box-btn" class="add-box-btn">
+                    </div>
+                </div>
+                <div class="message">
+                    <span class="task-alert">You have 3 tasks pending.</span>
+                    <input type="button" value="Clear All" id="clear-tasks-btn" class="clear-tasks-btn">
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="./index.js"></script>
+</body>
+</html>
